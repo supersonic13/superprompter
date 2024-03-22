@@ -26,7 +26,7 @@ def main():
 
     if args.include_models:
         print("Including models in the bundled package, warning: this is untested and will make the package a lot larger!")
-        modelDir = os.path.expanduser("~") + "/.superprompter/model_files"
+        modelDir = os.cwd() + "/model_files"
         pyinstaller_args.extend(['--add-data', f'{modelDir}:model_files'])
         pyinstaller_args.extend(['--distpath=dist/with_models'])
 
