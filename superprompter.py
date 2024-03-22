@@ -8,7 +8,7 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 from download_models import download_models
 
 global tokenizer, model
-modelDir = os.path.expanduser("~") + "/.superprompter/model_files"
+modelDir = os.cwd() + "/model_files"
 
 def load_models():
     splash_text.insert(tk.END, "Checking for SuperPrompt-v1 model files...\n")
